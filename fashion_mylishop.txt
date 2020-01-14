@@ -2,10 +2,10 @@
 -- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jan 06, 2020 at 02:41 AM
--- Server version: 10.1.36-MariaDB
--- PHP Version: 7.2.11
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th1 14, 2020 lúc 12:10 PM
+-- Phiên bản máy phục vụ: 10.1.36-MariaDB
+-- Phiên bản PHP: 7.2.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `fashion_mylishop`
+-- Cơ sở dữ liệu: `fashion_mylishop`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admin`
+-- Cấu trúc bảng cho bảng `admin`
 --
 
 CREATE TABLE `admin` (
@@ -35,7 +35,7 @@ CREATE TABLE `admin` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `admin`
+-- Đang đổ dữ liệu cho bảng `admin`
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`) VALUES
@@ -44,7 +44,7 @@ INSERT INTO `admin` (`id`, `username`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `categories`
+-- Cấu trúc bảng cho bảng `categories`
 --
 
 CREATE TABLE `categories` (
@@ -53,18 +53,18 @@ CREATE TABLE `categories` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `categories`
+-- Đang đổ dữ liệu cho bảng `categories`
 --
 
 INSERT INTO `categories` (`id`, `name`) VALUES
-(1, 'Thời Trang Nam'),
-(2, 'Thời Trang Nữ'),
-(3, 'Hàng Mới Về');
+(1, 'Thoi Trang Nam'),
+(2, 'Thoi Trang Nu'),
+(3, 'Hang Moi Ve');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `comments`
+-- Cấu trúc bảng cho bảng `comments`
 --
 
 CREATE TABLE `comments` (
@@ -76,7 +76,7 @@ CREATE TABLE `comments` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `contacts`
+-- Cấu trúc bảng cho bảng `contacts`
 --
 
 CREATE TABLE `contacts` (
@@ -90,7 +90,7 @@ CREATE TABLE `contacts` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `contacts`
+-- Đang đổ dữ liệu cho bảng `contacts`
 --
 
 INSERT INTO `contacts` (`id`, `name`, `email`, `title`, `contents`, `created`, `status`) VALUES
@@ -99,7 +99,26 @@ INSERT INTO `contacts` (`id`, `name`, `email`, `title`, `contents`, `created`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `orders`
+-- Cấu trúc bảng cho bảng `gallery`
+--
+
+CREATE TABLE `gallery` (
+  `id_gallery` int(11) NOT NULL,
+  `id_pr` int(11) NOT NULL,
+  `image_pr` varchar(255) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `gallery`
+--
+
+INSERT INTO `gallery` (`id_gallery`, `id_pr`, `image_pr`) VALUES
+(23, 1, 'cao1.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `orders`
 --
 
 CREATE TABLE `orders` (
@@ -111,7 +130,7 @@ CREATE TABLE `orders` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `orders`
+-- Đang đổ dữ liệu cho bảng `orders`
 --
 
 INSERT INTO `orders` (`id`, `total`, `date_order`, `status`, `user_id`) VALUES
@@ -126,7 +145,7 @@ INSERT INTO `orders` (`id`, `total`, `date_order`, `status`, `user_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `products`
+-- Cấu trúc bảng cho bảng `products`
 --
 
 CREATE TABLE `products` (
@@ -144,16 +163,12 @@ CREATE TABLE `products` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `products`
+-- Đang đổ dữ liệu cho bảng `products`
 --
 
 INSERT INTO `products` (`id`, `name`, `category_id`, `image`, `description`, `price`, `saleprice`, `created`, `quantity`, `keyword`, `status`) VALUES
-(1, 'LÃª Thi Tuong Vy', 0, 'giay10.jpg', '', 180000, 0, '0000-00-00', 0, '', 0),
-(2, 'LÃª Thi Tuong Vy', 0, 'giay1.jpg', '', 290000, 0, '0000-00-00', 0, '', 0),
-(3, 'Giày', 1, 'giay3.jpg', '', 210000, 0, '2017-12-18', 10, '', 0),
-(4, 'LÃª Thi Tuong Vy', 0, 'cao2.jpg', '', 180000, 0, '0000-00-00', 0, '', 0),
-(47, 'LÃª Thi Tuong Vy', 2, 'cao5.jpg', ' ', 120000, 150000, '0000-00-00', 1, 'GiÃ y', 5),
-(5, 'Giày', 1, 'slide1.jpg', '', 250000, 0, '2017-12-18', 12, '', 0),
+(4, 'Le Thi Tuong Vy', 0, 'cao2.jpg', '', 180000, 0, '0000-00-00', 4, '', 0),
+(5, 'giay', 1, 'slide1.jpg', '', 250000, 0, '2017-12-18', 12, '', 0),
 (6, 'Giày', 2, 'slide2.jpg', '', 165000, 0, '2017-12-18', 15, '', 0),
 (7, 'Giày', 2, 'slide3.jpg', '', 155000, 0, '2017-12-18', 9, '', 0),
 (8, 'Giày', 2, 'slide4.jpg', '', 195000, 0, '2017-12-18', 19, '', 0),
@@ -168,24 +183,25 @@ INSERT INTO `products` (`id`, `name`, `category_id`, `image`, `description`, `pr
 (17, 'Giày', 3, 'giay18.jpg', '', 245000, 0, '2017-12-18', 13, '', 0),
 (18, 'Giày', 1, 'giay14.jpg', '', 195000, 0, '2017-12-18', 15, '', 0),
 (19, 'Giày', 1, 'giay15.jpg', '', 115000, 0, '2017-12-18', 13, '', 0),
-(20, 'Giày', 2, 'giay16.jpg', '', 199000, 0, '2017-12-18', 20, '', 0),
 (21, 'Giày', 2, 'giay17.jpg', '', 299000, 0, '2017-12-18', 10, '', 0),
 (22, 'Giày', 3, 'cao1.jpg', '', 259000, 0, '2017-12-18', 10, '', 0),
 (23, 'Giày', 2, 'cao2.jpg', '', 169000, 0, '2017-12-18', 25, '', 0),
-(24, 'Giày', 2, 'cao3.jpg', '', 269000, 0, '2017-12-18', 0, '', 0),
+(24, 'Giày', 2, 'cao3.jpg', '', 269000, 0, '2017-12-18', 4, '', 0),
 (25, 'Giày', 1, 'cao4.jpg', '', 199000, 0, '2017-12-18', 13, '', 0),
 (26, 'Giày', 1, 'cao5.jpg', '', 189000, 0, '2017-12-18', 13, '', 0),
 (27, 'Giày', 2, 'cao6.jpg', '', 219000, 0, '2017-12-18', 20, '', 0),
-(28, 'Giày', 2, 'ao10.jpg', '', 209000, 0, '2017-12-18', 30, '', 0),
 (30, 'Giày', 1, 'cao7.jpg', '', 89000, 0, '2017-12-18', 15, '', 0),
 (31, 'Giày', 1, 'cao8.jpg', '', 229000, 0, '2017-12-18', 15, '', 0),
 (32, 'Giày', 1, 'cao9.jpg', '', 299000, 0, '2017-12-18', 12, '', 0),
-(33, 'Giày', 2, 'cao11.jpg', '', 239000, 0, '2017-12-22', 20, '', 0);
+(789, 'GiÃ y cao gÃ³t', 1, '', ' ', 12333, 1233, '0000-00-00', 1, 'GiÃ y', 1),
+(786, 'Nhok lun', 0, 'cao11.jpg', '', 12333, 0, '0000-00-00', 0, '', 0),
+(33, 'Giay bup be', 1, 'cao1.jpg', '', 13000000, 15000000, '2020-01-08', 15, NULL, NULL),
+(790, 'Le Vy', 1, '', ' ', 12333, 1233, '0000-00-00', 1, 'GiÃ y', 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `product_order`
+-- Cấu trúc bảng cho bảng `product_order`
 --
 
 CREATE TABLE `product_order` (
@@ -195,7 +211,7 @@ CREATE TABLE `product_order` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `product_order`
+-- Đang đổ dữ liệu cho bảng `product_order`
 --
 
 INSERT INTO `product_order` (`product_id`, `order_id`, `quantity`) VALUES
@@ -210,7 +226,7 @@ INSERT INTO `product_order` (`product_id`, `order_id`, `quantity`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `promotions`
+-- Cấu trúc bảng cho bảng `promotions`
 --
 
 CREATE TABLE `promotions` (
@@ -222,7 +238,7 @@ CREATE TABLE `promotions` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `slides`
+-- Cấu trúc bảng cho bảng `slides`
 --
 
 CREATE TABLE `slides` (
@@ -231,31 +247,10 @@ CREATE TABLE `slides` (
   `status` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `slides`
---
-
-INSERT INTO `slides` (`id`, `image`, `status`) VALUES
-(1, 'images/background.jpg', 0),
-(2, 'images/slide/slide-3.jpg', 1),
-(3, 'images/slide/slide-4.jpg', 1),
-(4, 'images/slide/slide-5.jpg', 1),
-(5, 'images/slide/slide-2.jpg', 1),
-(6, 'images/banner/2.jpg', 2),
-(7, 'images/banner/3.jpg', 2),
-(8, 'images/banner/banner.jpg', 2),
-(9, 'images/banner/khuyenmaithang12.png', 2),
-(10, 'images/partner/partner1.png', 3),
-(11, 'images/partner/partner2.png', 3),
-(12, 'images/partner/partner3.png', 3),
-(13, 'images/partner/partner4.png', 3),
-(14, 'images/partner/partner5.png', 3),
-(15, 'images/partner/partner6.jpg', 3);
-
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Cấu trúc bảng cho bảng `users`
 --
 
 CREATE TABLE `users` (
@@ -271,21 +266,31 @@ CREATE TABLE `users` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `users`
+-- Đang đổ dữ liệu cho bảng `users`
 --
 
 INSERT INTO `users` (`id`, `fullname`, `username`, `password`, `email`, `address`, `phone`, `created`, `role`) VALUES
-(10, 'Hoih My', 'my.hoih', '49CDB4C2B576011E554669632DFBD7CC', 'my.hoih@student.passerellesnumeriques.org', 'Đà Nẵng', '01697450200', NULL, 1),
-(11, 'y blir', 'blir.y', 'C00813256690A14079A569831F9BAAD6', 'blir.y@student.passerellesnumeriques.org', 'Đà Nẵng', '0926055983', NULL, 1),
-(12, 'Ly Ca Tiếu', '', '', 'hoihmy2712@gmail.com', 'Đà Nẵng', '01697450200', NULL, 0),
-(13, 'Ly Ca Tiếu', '', '', 'hoihmy2712@gmail.com', 'Đà Nẵng', '01697450200', NULL, 0),
-(14, 'Ly Ca Tiếu', '', '', 'hoihmy2712@gmail.com', 'Đà Nẵng', '01697450200', NULL, 0),
-(15, 'Hello', 'hello', '5d41402abc4b2a76b9719d911017c592', 'hoihmy2712@gmail.com', 'Đà Nẵng', '123456789', NULL, 1);
+(29, 'Le Thi Tuong Vy', 'diu', 'diu', 'vyle11@sgmail.com', 'Da Nang', '035651454', NULL, 0),
+(28, 'Le Thi Tuong Vy', 'tuongvy', 'vyvyvyvy', 'vyle21@gmail.com', 'Da Nang', '3534546', NULL, 0);
 
 -- --------------------------------------------------------
 
 --
--- Stand-in structure for view `view_groupby_idorder`
+-- Cấu trúc bảng cho bảng `user_order`
+--
+
+CREATE TABLE `user_order` (
+  `fullname` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `pass` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `phone` int(20) NOT NULL,
+  `address` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc đóng vai cho view `view_groupby_idorder`
 -- (See below for the actual view)
 --
 CREATE TABLE `view_groupby_idorder` (
@@ -296,7 +301,7 @@ CREATE TABLE `view_groupby_idorder` (
 -- --------------------------------------------------------
 
 --
--- Stand-in structure for view `view_order_list`
+-- Cấu trúc đóng vai cho view `view_order_list`
 -- (See below for the actual view)
 --
 CREATE TABLE `view_order_list` (
@@ -318,7 +323,7 @@ CREATE TABLE `view_order_list` (
 -- --------------------------------------------------------
 
 --
--- Structure for view `view_groupby_idorder`
+-- Cấu trúc cho view `view_groupby_idorder`
 --
 DROP TABLE IF EXISTS `view_groupby_idorder`;
 
@@ -327,138 +332,138 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 -- --------------------------------------------------------
 
 --
--- Structure for view `view_order_list`
+-- Cấu trúc cho view `view_order_list`
 --
 DROP TABLE IF EXISTS `view_order_list`;
 
 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_order_list`  AS  select `orders`.`id` AS `idOrder`,`users`.`fullname` AS `fullname`,`users`.`phone` AS `phone`,`users`.`email` AS `email`,`users`.`id` AS `idUser`,`users`.`address` AS `address`,`products`.`id` AS `idProduct`,`products`.`name` AS `nameProduct`,`products`.`price` AS `price`,`products`.`saleprice` AS `saleprice`,`product_order`.`quantity` AS `quantity`,`orders`.`status` AS `status`,`orders`.`date_order` AS `dateOrder` from (((`orders` join `users` on((`orders`.`user_id` = `users`.`id`))) join `product_order` on((`product_order`.`order_id` = `orders`.`id`))) join `products` on((`product_order`.`product_id` = `products`.`id`))) ;
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `admin`
+-- Chỉ mục cho bảng `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `categories`
+-- Chỉ mục cho bảng `categories`
 --
 ALTER TABLE `categories`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `comments`
+-- Chỉ mục cho bảng `comments`
 --
 ALTER TABLE `comments`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Indexes for table `contacts`
+-- Chỉ mục cho bảng `contacts`
 --
 ALTER TABLE `contacts`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `orders`
+-- Chỉ mục cho bảng `orders`
 --
 ALTER TABLE `orders`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Indexes for table `products`
+-- Chỉ mục cho bảng `products`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`),
   ADD KEY `category_id` (`category_id`);
 
 --
--- Indexes for table `product_order`
+-- Chỉ mục cho bảng `product_order`
 --
 ALTER TABLE `product_order`
   ADD KEY `product_id` (`product_id`),
   ADD KEY `order_id` (`order_id`);
 
 --
--- Indexes for table `promotions`
+-- Chỉ mục cho bảng `promotions`
 --
 ALTER TABLE `promotions`
   ADD PRIMARY KEY (`id`),
   ADD KEY `product_id` (`product_id`);
 
 --
--- Indexes for table `slides`
+-- Chỉ mục cho bảng `slides`
 --
 ALTER TABLE `slides`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `users`
+-- Chỉ mục cho bảng `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `categories`
+-- AUTO_INCREMENT cho bảng `categories`
 --
 ALTER TABLE `categories`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `comments`
+-- AUTO_INCREMENT cho bảng `comments`
 --
 ALTER TABLE `comments`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `contacts`
+-- AUTO_INCREMENT cho bảng `contacts`
 --
 ALTER TABLE `contacts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `orders`
+-- AUTO_INCREMENT cho bảng `orders`
 --
 ALTER TABLE `orders`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `products`
+-- AUTO_INCREMENT cho bảng `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=791;
 
 --
--- AUTO_INCREMENT for table `product_order`
+-- AUTO_INCREMENT cho bảng `product_order`
 --
 ALTER TABLE `product_order`
   MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- AUTO_INCREMENT for table `promotions`
+-- AUTO_INCREMENT cho bảng `promotions`
 --
 ALTER TABLE `promotions`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `slides`
+-- AUTO_INCREMENT cho bảng `slides`
 --
 ALTER TABLE `slides`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
