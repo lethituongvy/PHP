@@ -1,13 +1,13 @@
 <?php
 require_once 'conn.php';
 include_once 'delete_product.php';
+// require_once 'add_product.php';
 
 $sql = "SELECT * FROM products";
-$rs = mysqli_query($conn, $sql);
+$rs = $conn->query($sql);
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,24 +86,14 @@ $rs = mysqli_query($conn, $sql);
             </nav>
         </div>
     </div>
-    <?php
-    require_once '../PHP/conn.php';
-    error_reporting(2);
-
-    if (isset($_GET['notimage'])) {
-        $noimage = 'Vui lòng chọn hình ảnh hợp lệ!';
-    } else {
-        $noimage = '';
-    }
-    ?>
     <div id="page-wrapper">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header"> Thêm sản phẩm </h1>
+                    <h1 class="page-header" style="text-align: center"> Thêm sản phẩm </h1>
                 </div>
 
-                <div class="col-lg-7" style="padding-bottom:120px">
+                <div class="col-lg-12" style="padding-bottom:120px">
                     <form action="add_product.php" method="POST" enctype="multipart/form-data">
                         <div class="row">
                             <div class="col-md-6 col-sm-6 col-xs-6">
@@ -134,11 +124,8 @@ $rs = mysqli_query($conn, $sql);
                         <div class="row">
                             <div class="col-md-6 col-sm-6 col-xs-6">
                                 <div class="form-group">
-                                    <label> Chọn hình ảnh sản phẩm </label>
-                                    <input type="file" name="image" required>
-                                    <span style="color: red">
-                                        <?php echo $notimage; ?>
-                                    </span>
+                                    <label for="image">Hình ảnh</label>
+                                    <input type="file" class="form-control" name="image" id="image">
                                 </div>
                             </div>
                             <!-- //Chọn hình ảnh sản phẩm -->
@@ -196,11 +183,8 @@ $rs = mysqli_query($conn, $sql);
                         </div>
                         <!-- //Số lượng sản phẩm -->
                         <div class="row">
-                            <div class="col-md-6 col-sm-6 col-xs-6">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
                                 <button type="submit" name="addProduct" class="btn btn-warning btn-block btn-lg"> Thêm </button>
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-6">
-                                <button type="reset" class="btn btn-default btn-block btn-lg" style="background: gray; color:white;"> Thiết lập lại </button>
                             </div>
                         </div>
                     </form>

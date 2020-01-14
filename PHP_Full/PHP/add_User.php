@@ -44,4 +44,3 @@ function add_User()
        header('location: loginu.php');
      
    }
-   ?>

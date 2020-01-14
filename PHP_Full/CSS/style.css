@@ -1,0 +1,322 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a:hover {
+    background: #ddd;
+    color: black;
+}
+
+.main {
+    padding: 16px;
+    margin-top: 30px;
+    height: 1500px;
+    /* Used in this example to enable scrolling */
+}
+
+.form-group {
+    width: 500px;
+}
+
+.col-md-2 .list img:hover {
+    -ms-transform: scale(1.9);
+    /* IE 9 */
+    -webkit-transform: scale(1.8);
+    /* Safari 3-8 */
+    transform: scale(1.2);
+}
+
+.col-md-2 .list {
+    text-decoration: none;
+    text-align: center;
+}
+
+.list {
+    margin-top: 20px;
+    color: #7A7A63;
+}
+
+#icons #in,
+#fb,
+#tw,
+#lin {
+    font-size: 30px;
+    color: black;
+}
+
+#icons i {
+    width: 30px;
+}
+
+#giohang a {
+    text-decoration: none;
+    color: black
+}
+
+body {
+    margin: 0;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 17px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a:hover {
+    background: #ddd;
+    color: black;
+}
+
+.main {
+    padding: 1px;
+    margin-top: 30px;
+    height: 1500px;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+}
+
+#input {
+    width: 500px;
+    height: 45px;
+}
+
+#tkicon {
+    height: 45px;
+    text-align: center;
+}
+
+.giohang img {
+    width: 50px;
+    height: 50px;
+}
+
+.dropdown {
+    padding: 0px 30px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+}
+
+ul li:hover {
+    background-color: #EABBBB;
+    color: #69A487
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+#phone,
+#email,
+#sign,
+#regis {
+    font-size: 20px;
+    color: green;
+}
+
+#chu {
+    font-size: 16px;
+}
+
+#timkiem {
+    margin-top: 30px;
+}
+
+#giohang {
+    margin-top: 35px;
+    border: 1px solid grey;
+    width: 150px;
+    height: 45px;
+}
+
+#sluong {
+    width: 30px;
+    color: white;
+    background-color: orange;
+    text-align: center;
+}
+
+#item_giohang {
+    margin-top: 10px;
+}
+
+#vanchuyen {
+    border: 1px solid grey;
+    height: 80px;
+    padding: 10px;
+    width: 265px;
+    text-align: center;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+#hotro,
+#hoantra,
+#thanhtoan {
+    border: 1px solid grey;
+    height: 80px;
+    width: 265px;
+    padding: 10px;
+    margin-left: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.text {
+    font-size: 11px;
+}
+
+#vanchuyen:hover,
+#hoantra:hover,
+#thanhtoan:hover,
+#hotro:hover {
+    color: red;
+    border: 1px solid red;
+}
+
+#danhmuc {
+    width: 262px;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: orange;
+    height: 40px;
+    padding-top: 10px
+}
+
+ul .nd {
+    text-decoration: none;
+}
+
+#menungang {
+    margin-top: 30px;
+}
+
+#danhmuc .nd {
+    text-decoration: none;
+    text-align: center;
+}
+
+#dkhoan:hover,
+#sign:hover,
+#regis:hover,
+#dky:hover,
+#dnhap:hover {
+    color: orange;
+}
+
+#dkhoan {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+#giohang:hover {
+    color: red;
+    border: 1px solid red;
+}
+
+#menu {
+    margin-left: 200px;
+}
+
+.image {
+    width: 20px;
+    height: 20px;
+}
+
+#head {
+    background-image: linear-gradient(-45deg, #9AFE2E, #E7A2F1, #9AFE2E);
+}
+
+#part2 {
+    display: flex;
+}
+
+#hoasn a {
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px;
+    color: yellow;
+}
+
+#cuoi {
+    margin-top: 40px;
+}
+
+.col-sm-4 {
+    text-align: center;
+}
+
+.col-sm-4 {
+    text-align: center;
+}
+
+#foot {
+    background-image: url(../IMAGE/33.jpg);
+}
+
+hr {
+    margin-bottom: 0px;
+}
+
+#lirong {
+    height: 60px;
+}
+
+#icons #in,
+#fb,
+#tw,
+#lin {
+    font-size: 30px;
+    color: #F86AF3;
+}
+
+#icons i {
+    width: 30px;
+}
+
+#part2 #giohang a {
+    text-decoration: none;
+    color: black
+}
