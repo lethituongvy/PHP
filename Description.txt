@@ -1,0 +1,7 @@
+Admin:
+user name: mylishop
+password: tuongvy
+
+Users:
+user name: diu
+password: diu
