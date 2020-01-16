@@ -1,7 +1,10 @@
+chạy file http://webgiaytuongvy.epizy.com/PHP/logina.php sẽ chạy form login của admin
+
 Admin:
 user name: mylishop
 password: tuongvy
 
+chạy file http://webgiaytuongvy.epizy.com/PHP/test.php sẽ chạy trang chủ của người dùng
 Users:
 user name: diu
 password: diu
